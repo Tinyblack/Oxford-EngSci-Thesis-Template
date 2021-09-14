@@ -1,0 +1,39 @@
+% ------------------------------------------------------ %
+%                Chapter --- Reference                   %
+% ------------------------------------------------------ %
+
+% ------------------------------------------------------ %
+%            Add a Table of Content entry                %
+% ------------------------------------------------------ %
+
+%% Add a gap before the section name in the table of content.
+\addtocontents{toc}{\protect\vspace{20pt}}%
+
+%% Reestablish the hyperref anchors. (Just to remove a warning in the output)
+\phantomsection% 
+
+%% Add the section name into the table of content.
+\addcontentsline{toc}{section}{\normalsize\bibname}%
+
+
+
+%% Enable the following line if biber is used as bibliography interpretor (biblatex package is required). %%
+
+% ------------------------------------------------------ %
+%          Print bibliography list (biblatex)            %
+% ------------------------------------------------------ %
+
+\printbibliography%
+%% Enable the following two lines if bibtex is used as bibliography interpretor. %%
+
+% ------------------------------------------------------ %
+%        Bibliography style Config (bibtex)              %
+% ------------------------------------------------------ %
+
+%\bibliographystyle{IEEEtran}%
+
+% ------------------------------------------------------ %
+%                 Bibliography file (*.bib)              %
+% ------------------------------------------------------ %
+
+%\bibliography{Transfer_Report}%

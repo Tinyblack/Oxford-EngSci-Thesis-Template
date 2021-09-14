@@ -1,0 +1,54 @@
+% !TeX root = Report_MAIN.tex
+% !TeX program = XeLaTeX
+% !TeX encoding = UTF-8
+
+% Build tool chain: xelatex->biber->xelatex->xelatex
+
+%-----------------------------------------------%
+%              Set document class               %
+%-----------------------------------------------%
+
+% FontSize = 12pt, PaperSize = A4, DocumentClass = OxReport
+% OxReport.cls is a class inherited from report class
+
+\documentclass[12pt, a4paper]{OxReport}%
+
+%-----------------------------------------------%
+%              Include Package(s)               %
+%-----------------------------------------------%
+
+% Necessary packages have been included into the style file
+% The fine adjustment to the report can be done in OxReport.sty file.
+\usepackage{OxReport}%
+% Add extra packages if the required packages are not in the style file
+% \usepackage{<other-packages>}
+
+%-----------------------------------------------%
+%             Include bibliography              %
+%-----------------------------------------------%
+
+\addbibresource{IEEEexample.bib} 
+
+%-----------------------------------------------%
+%           Main Content of the Report          %
+%-----------------------------------------------%
+
+\begin{document}
+    \doublespacing%
+    \include{Chapters/Report_00_TitlePage}%
+    \begin{romanpages}
+        \doublespacing%
+        \include{Chapters/Report_01_Abstract}%
+        \singlespacing%
+        \include{Chapters/Report_02_TableOfContent}%
+        \doublespacing%
+    \end{romanpages}
+    \doublespacing%
+    \include{Chapters/Report_CH1_First Chapter}%
+    \include{Chapters/Report_CH2_Second Chapter}%
+    \include{Chapters/Report_CH3_Third Chapter}%
+    \include{Chapters/Report_CH4_Fourth Chapter}%
+    \include{Chapters/Report_CH5_Fifth Chapter}%
+    \singlespacing%
+    \include{Chapters/Report_CH6_Bibliography}%
+\end{document}

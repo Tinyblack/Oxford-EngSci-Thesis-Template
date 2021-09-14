@@ -1,0 +1,10 @@
+*.synctex.gz
+*.pdf
+Diff/*.pdf
+*.synctex(busy)
+*.txt
+*.bak
+*.docx
+*.doc
+*.bbl
+*.log
