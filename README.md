@@ -28,7 +28,6 @@ According to the [instructions](https://github.com/James-Yu/LaTeX-Workshop/wiki/
 
 ```json
 "latex-workshop.latex.tools": [
-  
         {
             "name": "xelatex",
             "command": "xelatex",
