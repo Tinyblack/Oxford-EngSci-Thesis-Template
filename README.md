@@ -38,7 +38,7 @@ According to the [instructions](https://github.com/James-Yu/LaTeX-Workshop/wiki/
                 "-file-line-error",
                 "--output-directory=%OUTDIR%",
                 "%DOC%"
-              
+            
             ]
         },
         {
@@ -148,7 +148,6 @@ According to the [instructions](https://github.com/James-Yu/LaTeX-Workshop/wiki/
 \end{document}
 ```
 
-
 ## Example Complex Usage
 
 ```latex
@@ -188,6 +187,10 @@ According to the [instructions](https://github.com/James-Yu/LaTeX-Workshop/wiki/
 * Email: [zimo.zhao@eng.ox.ac.uk](mailto:zimo.zhao@eng.ox.ac.uk)
 * Website: [https://eng.ox.ac.uk/smp](https://eng.ox.ac.uk/smp)
 * Reporting issues and bugs to my Github repository is more welcomed.
+
+## Known Issues
+
+1. NOT supoort Overleaf. It requires local compliers to work. It is mainly caused by the Garamond font in the Title page. Overleaf do not support Garamond font. Currently I'm trying to find a walkthrough with different packages.
 
 ## Version History:
 
