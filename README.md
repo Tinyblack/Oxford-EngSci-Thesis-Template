@@ -189,7 +189,7 @@ According to the [instructions](https://github.com/James-Yu/LaTeX-Workshop/wiki/
 
 ## Known Issues
 
-1. NOT supoort Overleaf. It requires local compliers to work. It is mainly caused by the Garamond font in the Title page. Overleaf do not support Garamond font. Currently I'm trying to find a walkthrough with different packages.
+1. NOT supoort Overleaf. It requires local compliers to work. It is mainly caused by the Garamond font in the Title page. Overleaf do not support Garamond font. Currently I'm trying to find a walkthrough with different packages. 
 
 ## Version History:
 
