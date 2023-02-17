@@ -156,7 +156,6 @@
 			"*/*.xml",
 			"*/*.sta"
 		],
-		"explorer.confirmDelete": false,
 		"editor.wordWrap": "on",
 		"latex-workshop.view.pdf.viewer": "tab",
 		"latex-workshop.intellisense.file.exclude": [
@@ -186,24 +185,11 @@
 		],
 		"latex-workshop.synctex.afterBuild.enabled": true,
 		"latex-workshop.linting.chktex.enabled": true,
-		"cSpell.language": "en,en-GB",
-		"cSpell.allowCompoundWords": true,
-		"cSpell.checkLimit": 5000,
-		"C_Cpp.default.compilerPath": "F:\\mingw64\\bin\\g++.exe",
 		"git.enableSmartCommit": true,
 		"latex-workshop.latex.autoClean.run": "onBuilt",
 		"latex-workshop.latex.autoBuild.run": "never",
-		"explorer.confirmDragAndDrop": false,
-		"latex-workshop.message.update.show": false,
 		"git.autofetch": true,
 		"editor.suggestSelection": "first",
-		"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-		"python.languageServer": "Pylance",
-		"workbench.startupEditor": "newUntitledFile",
-		"editor.largeFileOptimizations": false,
-		"[html]": {
-			"editor.defaultFormatter": "vscode.html-language-features"
-		},
 		"latex-workshop.linting.chktex.exec.args": [
 			"-wall",
 			"-n44",
@@ -216,17 +202,9 @@
 		],
 		"workbench.settings.enableNaturalLanguageSearch": false,
 		"workbench.iconTheme": "vscode-icons",
-		"[jsonc]": {
-			"editor.defaultFormatter": "HookyQR.beautify"
-		},
-		"[javascript]": {
-			"editor.defaultFormatter": "HookyQR.beautify"
-		},
-		"latex-workshop.latex.recipe.default": "xelatex->xelatex->xelatex",
+		"latex-workshop.latex.recipe.default": "xelatex->biber->xelatex->xelatex",
 		"vsicons.dontShowNewVersionMessage": true,
 		"git.confirmSync": false,
-		"cmake.configureOnOpen": true,
 		"latex-workshop.texcount.autorun": "onSave",
-		"esbonio.sphinx.confDir": "",
 	},
 }
