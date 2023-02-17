@@ -8,3 +8,5 @@ Diff/*.pdf
 *.doc
 *.bbl
 *.log
+*.aux
+!Images/*.pdf

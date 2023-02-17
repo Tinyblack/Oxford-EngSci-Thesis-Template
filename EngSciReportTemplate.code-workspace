@@ -1,0 +1,232 @@
+{
+	"folders": [{
+		"path": "."
+	}],
+	"settings": {
+		"files.autoSave": "onFocusChange",
+		"latex-workshop.latex.tools": [{
+				"name": "xelatex",
+				"command": "xelatex",
+				"args": [
+					"--shell-escape",
+					"-synctex=1",
+					"-interaction=nonstopmode",
+					"-file-line-error",
+					"--output-directory=%OUTDIR%",
+					"%DOC%"
+				]
+			},
+			{
+				"name": "bibtex",
+				"command": "bibtex",
+				"args": [
+					"%DOCFILE%"
+				]
+			},
+			{
+				"name": "biber",
+				"command": "biber",
+				"args": [
+					"%DOCFILE%"
+				]
+			},
+			{
+				"name": "pdflatex",
+				"command": "pdflatex",
+				"args": [
+					"-synctex=1",
+					"-interaction=nonstopmode",
+					"-file-line-error",
+					"%DOC%"
+				]
+			},
+			{
+				"name": "lualatex",
+				"command": "lualatex",
+				"args": [
+					"-synctex=1",
+					"-interaction=nonstopmode",
+					"-file-line-error",
+					"%DOC%"
+				]
+			}
+		],
+		"latex-workshop.latex.recipes": [
+			{
+				"name": "xelatex->bibtex->xelatex->xelatex",
+				"tools": [
+					"xelatex",
+					"bibtex",
+					"xelatex",
+					"xelatex"
+				]
+			},
+			{
+				"name": "xelatex->biber->xelatex->xelatex",
+				"tools": [
+					"xelatex",
+					"biber",
+					"xelatex",
+					"xelatex"
+				]
+			},
+			{
+				"name": "xelatex",
+				"tools": [
+					"xelatex"
+				]
+			},
+			{
+				"name": "xelatex->xelatex",
+				"tools": [
+					"xelatex",
+					"xelatex"
+				]
+			},
+			{
+				"name": "xelatex->xelatex->xelatex",
+				"tools": [
+					"xelatex",
+					"xelatex",
+					"xelatex"
+				]
+			},
+			{
+				"name": "pdflatex",
+				"tools": [
+					"pdflatex"
+				]
+			},
+			{
+				"name": "lualatex",
+				"tools": [
+					"lualatex"
+				]
+			}
+		],
+		"latex-workshop.latex.clean.fileTypes": [
+			"*.bbl",
+			"*.blg",
+			"*.idx",
+			"*.ind",
+			"*.lof",
+			"*.lot",
+			"*.out",
+			"*.toc",
+			"*.acn",
+			"*.acr",
+			"*.alg",
+			"*.glg",
+			"*.glo",
+			"*.gls",
+			"*.fls",
+			"*.log",
+			"*.fdb_latexmk",
+			"*.snm",
+			"*.synctex(busy)",
+			"*.synctex.gz(busy)",
+			"*.nav",
+			"*.vrb",
+			"*.bcf",
+			"*.xml",
+			"*.sta",
+			"*/*.bbl",
+			"*/*.blg",
+			"*/*.idx",
+			"*/*.ind",
+			"*/*.lof",
+			"*/*.lot",
+			"*/*.out",
+			"*/*.toc",
+			"*/*.acn",
+			"*/*.acr",
+			"*/*.alg",
+			"*/*.glg",
+			"*/*.glo",
+			"*/*.gls",
+			"*/*.fls",
+			"*/*.log",
+			"*/*.fdb_latexmk",
+			"*/*.snm",
+			"*/*.synctex(busy)",
+			"*/*.synctex.gz(busy)",
+			"*/*.nav",
+			"*/*.vrb",
+			"*/*.bcf",
+			"*/*.xml",
+			"*/*.sta"
+		],
+		"explorer.confirmDelete": false,
+		"editor.wordWrap": "on",
+		"latex-workshop.view.pdf.viewer": "tab",
+		"latex-workshop.intellisense.file.exclude": [
+			"**/*.bbl",
+			"**/*.bcf",
+			"**/*.blg",
+			"**/*.idx",
+			"**/*.ind",
+			"**/*.lof",
+			"**/*.lot",
+			"**/*.out",
+			"**/*.toc",
+			"**/*.acn",
+			"**/*.acr",
+			"**/*.alg",
+			"**/*.glg",
+			"**/*.glo",
+			"**/*.gls",
+			"**/*.ist",
+			"**/*.fls",
+			"**/*.log",
+			"**/*.nav",
+			"**/*.snm",
+			"**/*.fdb_latexmk",
+			"**/*.synctex.gz",
+			"**/*.run.xml"
+		],
+		"latex-workshop.synctex.afterBuild.enabled": true,
+		"latex-workshop.linting.chktex.enabled": true,
+		"cSpell.language": "en,en-GB",
+		"cSpell.allowCompoundWords": true,
+		"cSpell.checkLimit": 5000,
+		"C_Cpp.default.compilerPath": "F:\\mingw64\\bin\\g++.exe",
+		"git.enableSmartCommit": true,
+		"latex-workshop.latex.autoClean.run": "onBuilt",
+		"latex-workshop.latex.autoBuild.run": "never",
+		"explorer.confirmDragAndDrop": false,
+		"latex-workshop.message.update.show": false,
+		"git.autofetch": true,
+		"editor.suggestSelection": "first",
+		"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+		"python.languageServer": "Pylance",
+		"workbench.startupEditor": "newUntitledFile",
+		"editor.largeFileOptimizations": false,
+		"[html]": {
+			"editor.defaultFormatter": "vscode.html-language-features"
+		},
+		"latex-workshop.linting.chktex.exec.args": [
+			"-wall",
+			"-n44",
+			"-n46",
+			"-n22",
+			"-n30",
+			"-e16",
+			"-q",
+			"-n21"
+		],
+		"workbench.settings.enableNaturalLanguageSearch": false,
+		"workbench.iconTheme": "vscode-icons",
+		"[jsonc]": {
+			"editor.defaultFormatter": "HookyQR.beautify"
+		},
+		"[javascript]": {
+			"editor.defaultFormatter": "HookyQR.beautify"
+		},
+		"latex-workshop.latex.recipe.default": "xelatex->xelatex->xelatex",
+		"vsicons.dontShowNewVersionMessage": true,
+		"git.confirmSync": false,
+		"cmake.configureOnOpen": true,
+		"latex-workshop.texcount.autorun": "onSave",
+		"esbonio.sphinx.confDir": "",
+	},
+}

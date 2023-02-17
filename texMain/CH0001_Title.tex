@@ -1,0 +1,81 @@
+% !TeX root = ThesisMain.tex
+% !TeX program = XeLaTeX
+% !TeX encoding = UTF-8
+% !TeX spellcheck = en_GB
+
+\documentclass[../ThesisMain]{subfiles}
+\ifSubfilesClassLoaded{}{}%
+\begin{document}
+\doublespacing%
+\begin{titlepage}
+
+% Centre everything on the page
+\center%
+
+%------------------------------------------------
+%	Headings
+%------------------------------------------------
+
+% University name in title page
+\titleUniversity{UNIVERSITY OF OXFORD}%
+% Department name in title page
+\titleDepartment{DEPARTMENT OF ENGINEERING SCIENCE}%
+
+%------------------------------------------------
+%	Title
+%------------------------------------------------
+
+\titleHRule%
+\vspace{12pt}%
+% Thesis/Report title in title page
+\titleTitle{<The Title of Your Thesis>}%
+\vspace{12pt}%
+\titleHRule%
+\vspace{12pt}%
+
+%------------------------------------------------
+%	Document Type
+%------------------------------------------------
+% Document Type in title page
+%\titleType{THESIS FOR DEGREE}%
+\vspace{15pt}%
+
+%------------------------------------------------
+%	Author(s)
+%------------------------------------------------
+
+% Author name in title page
+\titleName{<Your Name>}%
+\vspace{10pt}%
+% College name in title page
+\titleCollege{<Your College>}% 
+\vspace{30pt}%
+
+%------------------------------------------------
+%	University Crest
+%------------------------------------------------
+
+% Add University Crest to the Title page
+\begin{figure}[H]%
+	\centering%
+	\includegraphics[scale=0.08]{\subfix{../Images/Oxford.jpg}}%
+\end{figure}%
+
+%------------------------------------------------
+%	Supervisor group and Date
+%------------------------------------------------
+
+% Position the supervisor and date information 3/4 down the remaining page
+\vfill
+% Supervisor group information in title page
+\titleThesis{A thesis submitted for the degree of\\\textit{Doctor of Philosophy}}%
+% Supervisor group information in title page
+\titleSupervisor{Supervised by <Professors>}%
+\vspace{10pt}%
+% Date information in title page
+\titleDate{<Month> <Year>}%
+% Push the supervisor and date information up 1/4 of the remaining page
+\vfill 
+\end{titlepage}
+\newpage    
+\end{document}

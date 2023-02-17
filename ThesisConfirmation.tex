@@ -1,0 +1,36 @@
+% !TeX root = ThesisConfirmation.tex
+% !TeX program = XeLaTeX
+% !TeX encoding = UTF-8
+% !TeX spellcheck = en_GB
+
+\documentclass[Confirmation,digital]{OxReport}
+\externaldocument[M-]{ThesisConfirmation}
+\addbibresource{\subfix{./IEEEexample.bib}} 
+
+\begin{document}
+\begin{romanpages}%
+\subfile{./texConfirmation/CH00_Title.tex}
+\subfile{./texConfirmation/CH01_Introduction.tex}
+\subfile{./texConfirmation/CH02_ToC.tex}
+\end{romanpages}%
+\tocstopwriting{}%
+\subfile{./texConfirmation/CH03_Published_Article.tex}
+\subfile{./texConfirmation/CH04_Chapter_Summary.tex}
+\subfile{./texConfirmation/CH05_Gantt_Chart.tex}
+\subfile{./texConfirmation/CH06_Risk_Analysis.tex}
+\subfile{./texConfirmation/CH07_Publication_List.tex}
+\tocresumewriting{}%
+\setcounter{page}{0}
+\setcounter{chapter}{0}
+\subfile{./texMain/CH0000_Preamble.tex}
+\subfile{./texMain/CH0100_Chapter_01.tex}
+\subfile{./texMain/CH0200_Chapter_02.tex}
+\subfile{./texMain/CH0300_Chapter_03.tex}
+\subfile{./texMain/CH0400_Chapter_04.tex}
+\subfile{./texMain/CH0500_Chapter_05.tex}
+\subfile{./texMain/CH0600_Chapter_06.tex}
+\subfile{./texMain/CH0700_Chapter_07.tex}
+\subfile{./texMain/CH0800_Chapter_08.tex}
+\subfile{./texMain/CH0900_Chapter_09.tex}
+\subfile{./texMain/CH1000_Reference.tex}
+\end{document}
