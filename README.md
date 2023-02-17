@@ -1,7 +1,7 @@
 [![release](https://img.shields.io/github/v/release/Tinyblack/Oxford-EngSci-Report-Template?display_name=tag)]()
 [![updated](https://img.shields.io/visual-studio-marketplace/last-updated/James-Yu.latex-workshop)](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-# Oxford EngSci Report Template (unofficial)
+# Oxford EngSci Thesis Template
 
 ## Introduction
 
