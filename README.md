@@ -216,16 +216,10 @@ The font included in this repository is [EB Garamond](http://www.georgduffner.at
 ## Author Information:
 
 * Author: Zimo Zhao
-* DPhil Student in Dept. Engineering Science, University of Oxford, Oxford OX1 3PJ, UK
+* Postdoc Researcher in Dept. Engineering Science, University of Oxford, Oxford OX1 3PJ, UK
 * Email: [zimo.zhao@eng.ox.ac.uk](mailto:zimo.zhao@eng.ox.ac.uk)
-* Website: [https://eng.ox.ac.uk/smp](https://eng.ox.ac.uk/smp)
+* Website: [Vectorial Optics and Photonics Group](https://www.voplab.com), [Soft Matter and Photonics Group](https://eng.ox.ac.uk/smp)
 * Reporting issues and bugs to my GitHub repository is more welcomed.
-
-## To Do
-
-1. Add more examples in the example TeX files to show how to insert the images, equations and tables.
-2. Add more examples about how to use cross reference among different files (```xr``` package related).
-
 
 
 ## Version History:
@@ -233,3 +227,5 @@ The font included in this repository is [EB Garamond](http://www.georgduffner.at
 1.0.0 ----- 14 Sep 2021 ----- Initial Release
 
 2.0.0 ----- 17 Feb 2023 ----- Rewrite the template and enrich README
+
+3.0.0 ----- 19 Feb 2025 ----- Update the template with the latest format

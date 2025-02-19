@@ -15,7 +15,8 @@
 
 %% Package options for biblatex in Thesis
 \DeclareOption{Thesis}{
-    \PassOptionsToPackage{style=ieee,citestyle=numeric-comp}{biblatex}
+    % \PassOptionsToPackage{style=nature,citestyle=numeric-comp,bibstyle=numeric,sorting=none}{biblatex}
+    \PassOptionsToPackage{backend=biber,style=nature,doi=false,isbn=false,url=false,eprint=false,date=year}{biblatex}
 }
 
 %% Package options for biblatex in Transfer of Status
@@ -28,14 +29,14 @@
     \PassOptionsToPackage{bibstyle=authortitle,citestyle=authoryear,sorting=none,maxbibnames=99,maxcitenames=1,mincitenames=1,uniquelist=false,uniquename=false}{biblatex}
 }
 
-\DeclareOption{print}{
-    \PassOptionsToPackage{style=ieee,citestyle=numeric-comp}{biblatex}
-}
+% \DeclareOption{print}{
+%     \PassOptionsToPackage{style=ieee,citestyle=numeric-comp}{biblatex}
+% }
 
-%% Package options for biblatex in Transfer of Status
-\DeclareOption{digital}{
-    \PassOptionsToPackage{style=ieee,citestyle=numeric-comp}{biblatex}
-}
+% %% Package options for biblatex in Transfer of Status
+% \DeclareOption{digital}{
+%     \PassOptionsToPackage{style=ieee,citestyle=numeric-comp}{biblatex}
+% }
 
 \newif\ifOxReport@Print
 \newif\ifOxReport@Digital
@@ -75,8 +76,9 @@
 \RequirePackage{fancyhdr}%
 \RequirePackage{amsmath}%
 \RequirePackage{amssymb}%
+% \RequirePackage[smaller]{acronym}%
 \RequirePackage[hidelinks]{hyperref}%
-\RequirePackage{caption}%
+\RequirePackage[labelfont=bf]{caption}%
 \RequirePackage{subcaption}%
 \RequirePackage{color}%
 \RequirePackage{supertabular}%
@@ -96,13 +98,59 @@
 \RequirePackage{xr}
 \RequirePackage{refcount}
 \RequirePackage{subfiles}
+\RequirePackage{tabularray}
+\RequirePackage{xcolor}
+\RequirePackage{quotchap}
+\RequirePackage{silence}
+\WarningsOff[everypage]
+\RequirePackage[pages=some,placement=center]{background}
+\RequirePackage[nonumberlist, acronym, nopostdot,nostyles]{glossaries}
+\RequirePackage[automake]{glossaries-extra}
+\RequirePackage{glossary-mcols}
+\makeglossaries
+
+\newglossarystyle{mcolalttree-alter}{%
+    \setglossarystyle{alttree}%
+    \renewenvironment{theglossary}%
+    {%
+        \begin{multicols}{2}%
+            \def\@gls@prevlevel{-1}%
+%           \mbox{}\par
+        }%
+        {\par\end{multicols}}%
+}
+
+
+% \RequirePackage{cleveref}
+
 
 %-----------------------------------------------%
 % Layout Control for the report
 %-----------------------------------------------%
 
 % Page margins configuration
-\geometry{left=2cm, top=1cm, right=2cm, bottom=2cm,includehead}%
+\geometry{left=2.5cm, top=1cm, right=2.5cm, bottom=2.5cm,includehead}%
+
+%-----------------------------------------------%
+% Linespace setup
+%-----------------------------------------------%
+
+\setstretch{2}
+
+%-----------------------------------------------%
+% microtype setup
+%-----------------------------------------------%
+
+% \microtypesetup{activate={true,nocompatibility}}
+\microtypesetup{factor=1100}
+% \microtypesetup{stretch=10}
+% \microtypesetup{shrink=10}
+
+
+\NewTblrTheme{fancy}{
+  \DefTblrTemplate{conthead}{default}{[Continued]}
+  \SetTblrStyle{firsthead}{font=\small}
+}
 
 %-----------------------------------------------%
 % Captions setup
@@ -130,10 +178,19 @@
 
 % Set array rule width
 \setlength{\arrayrulewidth}{0.5mm}%
-% Set arry rule width
+% Set array rule width
 \setlength{\tabcolsep}{12pt}%
-% Set arry line stretch
-\renewcommand{\arraystretch}{1.5}%
+% Set array line stretch
+\renewcommand{\arraystretch}{1}%
+
+%-----------------------------------------------%
+% Tweak amssymb package with matrix line stretch
+%-----------------------------------------------%
+\renewcommand*\env@matrix[1][\arraystretch]{%
+  \edef\arraystretch{#1}%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{*\c@MaxMatrixCols c}}
 
 %-----------------------------------------------%
 % Page header/footer setup (default: OFF)
@@ -144,7 +201,7 @@
 \setlength{\headsep}{15pt}
 \fancyhf{}
 % \fancyhead[R]{\rightmark}
-\fancyfoot[L]{\leftmark}
+% \fancyfoot[L]{\leftmark}
 \fancyfoot[R]{\thepage}
 
 \renewcommand{\headrulewidth}{0pt}
@@ -166,7 +223,7 @@
     BoldFont = *-SemiBold, 
     ItalicFont = *-Italic, 
     BoldItalicFont = *-BoldItalic, 
-    LetterSpace=35.00
+    WordSpace=2.00,LetterSpace=25.00
     ]%
 
 % Garamond font with normal letter space
@@ -186,7 +243,7 @@
     BoldFont = *-SemiBold, 
     ItalicFont = *-Italic, 
     BoldItalicFont = *-BoldItalic, 
-    WordSpace=1.2,LetterSpace=0.5
+    WordSpace=1.5,LetterSpace=1.5
     ]%
 
 \fi
@@ -220,7 +277,7 @@
     BoldFont = *-SemiBold, 
     ItalicFont = *-Italic, 
     BoldItalicFont = *-BoldItalic, 
-    WordSpace=1.2,LetterSpace=0.5
+    WordSpace=1,LetterSpace=2
     ]%
 \fi
     
@@ -294,8 +351,8 @@
 \newcommand{\dedicationname}{Dedication}
 \newenvironment{dedication}{
     \thispagestyle{empty}
-\begin{center}}%
-{\end{center}\par\vfil}
+\begin{flushleft}}%
+{\end{flushleft}\par\vfil}
 
 %-----------------------------------------------%
 % Acknowledgements Page Content Control
@@ -312,7 +369,7 @@
 % Achievements Page Content Control
 %-----------------------------------------------%
 
-\newcommand{\achievementname}{Achievements}
+\newcommand{\achievementname}{Publications and Presentations}
 \newenvironment{achievements}{
 \thispagestyle{plain}
 \begin{center}%
@@ -430,8 +487,8 @@
 % Change the cross reference names              %
 %-----------------------------------------------%
 
-\renewcommand{\figurename}{\textbf{Figure}}
-\renewcommand{\tablename}{\textbf{Table}}
+\renewcommand{\figurename}{\bfseries Figure}
+\renewcommand{\tablename}{\bfseries Table}
 %\renewcommand{\partname}{Part}
 %\renewcommand{\appendixname}{Appendix}
 %\renewcommand{\equationname}{Equation}
@@ -468,20 +525,38 @@
 % bibliography entry customisation
 %-----------------------------------------------%
 
+\DeclareNameAlias{author}{given-family}
+
 % Set bibliography entry space
 \setlength{\bibitemsep}{10pt}
 
 % Annotation handling function
 \renewcommand*{\mkbibnamegiven}[1]{%
-\ifitemannotation{highlight}
+\ifitemannotation[author]{highlight}
 {\textbf{#1}}
 {#1}}
 
 % Annotation handling function
 \renewcommand*{\mkbibnamefamily}[1]{%
-\ifitemannotation{highlight}
+\ifitemannotation[author]{highlight}
 {\textbf{#1}}
 {#1}}
+
+% Annotation handling function
+\DeclareFieldFormat{journaltitle}{\textit{#1}}
+
+\DeclareCiteCommand{\printpublication}
+  {\usebibmacro{prenote}}
+  {\usedriver
+     {\DeclareNameAlias{sortname}{default}%
+      \defcounter{maxnames}{99}%
+      \defcounter{minnames}{99}}
+     {\thefield{entrytype}}}
+  {\multicitedelim}
+  {\usebibmacro{postnote}}
+
+\renewcommand*{\bibfont}{\footnotesize}
+\setlength\bibitemsep{1pt}
 
 %-----------------------------------------------%
 % Tweaks to adjust the document
@@ -497,7 +572,9 @@
 %-----------------------------------------------%
 
 % Set the indent to be zero
-\setlength\parindent{0pt}
+% \setlength\parindent{0pt}
+\setlength\parindent{20pt}
+
 
 %-----------------------------------------------%
 % End of class marcos
